@@ -1,12 +1,13 @@
 import unittest
 
-def addNums(num1, num2):
-    return num1 + num2;
+def addTaxAndPrice(taxAmount, originalPrice):
+    return taxAmount + originalPrice;
+
 
 class TestNumMethod(unittest.TestCase):
     
-    def test_addNums(self):
-        self.assertEqual(7, addNums(3, 4));
+    def test_getTotalPrice(self):
+        self.assertEqual(10.7, addTaxAndPrice(0.7, 10));
 
 if __name__ == "__main__":
     unittest.main()
